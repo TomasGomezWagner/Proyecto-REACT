@@ -1,20 +1,43 @@
-export const ContadorApp = ({value}) => {
-// la funcion tiene que estar dentro del componente para poder usar el valor del padre????
+
+
+export const ContadorApp = ({value}) => {    
     const handleClick = () => {
         value += 1
         console.log(value)
     }
 
     return (
-        <> 
+        <>
             <h1>Contador: </h1>
-            <p>{ value }</p>
-            <button onClick={ handleClick }>
-                soy un boton
+            <p>{value}</p>
+            <button onClick={handleClick}>
+                Soy un Boton
             </button>
         </>
     )
 }
+
+
+
+
+
+// export const ContadorApp = ({value}) => {
+// // la funcion tiene que estar dentro del componente para poder usar el valor del padre????
+//     const handleClick = () => {
+//         value += 1
+//         console.log(value)
+//     }
+
+//     return (
+//         <> 
+//             <h1>Contador: </h1>
+//             <p>{ value }</p>
+//             <button onClick={ handleClick }>
+//                 soy un boton
+//             </button>
+//         </>
+//     )
+// }
 
 
 
@@ -29,7 +52,7 @@ export const ContadorApp = ({value}) => {
 
 // const Button = () => {
 //     return (
-//         <button onClick={ handleClick }> esto es si SOLO tiene un argumento
+////         <button onClick={ handleClick }> esto es si SOLO tiene un argumento
 //         <button onClick={(event) => handleClick(event, 'este es otro argumento')}>
 //             soy un boton
 //         </button>
