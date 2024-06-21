@@ -1,15 +1,17 @@
+import { useState } from "react"
 
-
-export const ContadorApp = ({value}) => {    
+export const ContadorApp = ({value}) => { //value lo manda el padre(main)
+    
+    const [contador, setContador] = useState (value) // [variable, funcion modificadora] = useState (valor pasado del padre/valor por defecto)
+    
     const handleClick = () => {
-        value += 1
-        console.log(value)
+        setContador(contador + 1)
     }
 
     return (
         <>
             <h1>Contador: </h1>
-            <p>{value}</p>
+            <p>{contador}</p>
             <button onClick={handleClick}>
                 Soy un Boton
             </button>
