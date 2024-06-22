@@ -3,3 +3,7 @@ body, html{
     color: white;
     padding: 1%;
 }
+
+.listElement {
+    color: blueviolet;
+}

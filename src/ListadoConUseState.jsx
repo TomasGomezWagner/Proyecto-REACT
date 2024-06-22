@@ -2,13 +2,16 @@ import { useState } from "react"
 
 const Items = ({nombre, visto}) => {// con la tecla de windows y punto('.') podes poner emojis
     return(
-        <li>
+        <li className="listElement">
             {nombre}
             {visto ? '✅' : '❌'}
         </li> 
     )
 }// (visto && 'algo') lo que hace es evaluar el primer elemento, si este el falso devuelve ese elemento(falso), de lo contrario devuelve el siguiente elemento
 // el if ternario es como php variable_a_evaluar ? resultado true : resultado false
+
+// clases de CSS
+// las clases de css se tienen que poner con el nombre de "className" y no class como en HTML porque no es HTML es JSX!!
 
 
 export const ListadoConUseState = () => {
