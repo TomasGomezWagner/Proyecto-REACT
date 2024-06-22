@@ -5,10 +5,10 @@ export const UseFetchData = ( endPoint ) => {
 
     const [data, setData] = useState([]) //mantiene el estado de data
     const [isLoading, setIsLoading] = useState(true)
-
+    
     //usar como promesa
     useEffect( () => { 
-        fetchdata( endPoint )
+        fetchdata( endPoint ) // si le agregas (.then(setIsLoading(true))) imprime cargando entre cargas de datos
         .then(
             res => {
                 setData(res.data)
@@ -16,7 +16,7 @@ export const UseFetchData = ( endPoint ) => {
             }
         )
         }, [endPoint]) // 'escucha' el cambio de lo que se le mando(endPoint) y llama a la funcion cuando cambia si la dependencia esta vacia no vuelve a llamar al endpont de la api
-    
+
     return {
         data,
         isLoading
