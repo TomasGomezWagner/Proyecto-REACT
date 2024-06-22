@@ -8,12 +8,9 @@ export const AgregarTarea = ( {setter} ) => {
     }
 
     const onSubmit = (event) => {
-        const datoNuevo = {
-            nombre: inputValue,
-            visto: false,
-        }
+        
         event.preventDefault()
-        setter(datos => [...datos, datoNuevo]) // en este caso se esta usando la info que ya esta(lista), se hace una copia y se agrega el nuevo dato 
+        setter(inputValue) // en este caso se esta usando la info que ya esta(lista), se hace una copia y se agrega el nuevo dato 
     }
 
   return (
