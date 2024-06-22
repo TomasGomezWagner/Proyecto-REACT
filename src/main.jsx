@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ContadorApp } from './ContadorApp'
+import { ListadoConCondicional } from './ListadoConCondicional' 
 import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    < ContadorApp value={0}/>
+    < ListadoConCondicional />
   </React.StrictMode>,
 )
