@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ListadoConCondicional } from './ListadoConCondicional' 
+import { ListadoConUseState } from './ListadoConUseState'
 import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    < ListadoConCondicional />
+    < ListadoConUseState />
   </React.StrictMode>,
 )
