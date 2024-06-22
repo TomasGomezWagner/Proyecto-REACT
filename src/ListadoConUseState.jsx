@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { AgregarTarea } from "./components/AgregarTarea"
 
 const Items = ({nombre, visto}) => {// con la tecla de windows y punto('.') podes poner emojis
     return(
@@ -7,12 +8,7 @@ const Items = ({nombre, visto}) => {// con la tecla de windows y punto('.') pode
             {visto ? '✅' : '❌'}
         </li> 
     )
-}// (visto && 'algo') lo que hace es evaluar el primer elemento, si este el falso devuelve ese elemento(falso), de lo contrario devuelve el siguiente elemento
-// el if ternario es como php variable_a_evaluar ? resultado true : resultado false
-
-// clases de CSS
-// las clases de css se tienen que poner con el nombre de "className" y no class como en HTML porque no es HTML es JSX!!
-
+}
 
 export const ListadoConUseState = () => {
 
@@ -37,14 +33,28 @@ export const ListadoConUseState = () => {
     return (
         <>
             <h1>Listado de Temas del Curso</h1>
+
+            <AgregarTarea setter={setArreglo}></AgregarTarea>
+
             <ol>
                 {arreglo.map(item => <Items key={item.nombre} nombre={item.nombre} visto={item.visto}></Items>)}
             </ol>
             
-            <button onClick={() => addTask()}>Agregar Tarea</button>
+
+            {/* <button onClick={() => addTask()}>Agregar Tarea</button> */}
         </>
     )
-}//key deberia ser un id unico. Como que lo necesita react 
+}
+
+
+// (visto && 'algo') lo que hace es evaluar el primer elemento, si este el falso devuelve ese elemento(falso), de lo contrario devuelve el siguiente elemento
+// el if ternario es como php variable_a_evaluar ? resultado true : resultado false
+
+// clases de CSS
+// las clases de css se tienen que poner con el nombre de "className" y no class como en HTML porque no es HTML es JSX!!
+
+
+//key deberia ser un id unico. Como que lo necesita react 
 // Se usa map porque devuelve una lista y eso es lo que necesita react. Se puede hacer con un forEach por ej pero se tiene que armar
 // la lista y despues pasarla sola
 
